@@ -17,15 +17,14 @@
             </svg>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/profile">Profile</a>            
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Settings</a>
             <a class="dropdown-item" href="/privacy_policy">Privacy Policy</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/logout">Log out</a>
           </div>
         </li>
-        
+        <li class="nav-item  <% if (pageName === "profile") { %> active <% } %>">
+          <a class="nav-link" href="/profile"> <img class = "rounded-circle" src="<%= user.pic%>" alt="" width="30" height="30"> <%= user.name%> </a>
+        </li>        
         <li class="nav-item  <% if (pageName === "postnow") { %> active <% } %>">
           <a class="nav-link" href="/postnow">Post Now</a>
         </li>
